@@ -1,0 +1,72 @@
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(315deg, rgba(255, 0, 150, 1) 3%, rgba(0, 0, 255, 1) 38%, rgba(75, 0, 130, 1) 68%, rgba(255, 20, 147, 1) 98%);
+    animation: gradient 30s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+.title {
+    color:#B0E0E6; 
+    text-align: center;
+    padding-top: 50px; 
+}
+
+.subtitle {
+    color:#B0E0E6; 
+    text-align: center;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 20s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 36s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 40s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% { transform: translateX(1); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-25%); }
+    100% { transform: translateX(1); }
+}
+
+#genres-list .button {
+    background: none;        
+    border: none;            
+    padding: 0;              
+    box-shadow: none;        
+    font-size: inherit;      
+    font-weight: 700;        
+    color: #ffff;          
+    text-transform: none;    
+    text-align: left;       
+    margin: 0;               
+}
